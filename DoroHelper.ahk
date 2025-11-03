@@ -205,7 +205,7 @@ g_DefaultRegionPriceData := defaultPriceData
 OnExit(WriteSettings)
 ;检测管理员身份
 if !A_IsAdmin {
-    MsgBox "请以管理员身份运行DoroHelper！`nPlease run DoroHelper as administrator!"
+    try Run('*RunAs "' A_ScriptFullPath '"')
     ExitApp
 }
 ;tag 彩蛋
